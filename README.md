@@ -17,11 +17,11 @@ You can install winpty from: https://github.com/rprichard/winpty
 
 
 * **Step 4: Run protractor container with a volume to local repo**<br />
-Open cygwin and cd into cloned protractordemo directory
-<br />
-```export FILES="//c/<directory-path-to-mpleijte/protractordemo>/protractor-tests"```
-<br />
-```winpty docker run -it --rm --net="host" -v $FILES:/src felippenardi/yo```
+Open cygwin and cd into cloned protractordemo directory<br />
+```
+export FILES="//c/<directory-path-to-mpleijte/protractordemo>/protractor-tests"
+winpty docker run -it --rm --net="host" -v $FILES:/src felippenardi/yo
+```
 <br /><br />
 _You should now be inside running protractor container._ 
 <br />**To run the test, execute the following command:** <br />
