@@ -29,15 +29,14 @@ _You should now be inside running protractor container._
 <br />
 <br />
 * **Step 5 (Optional) view running tests with VNC viewer**
-<br /> In cygwin type
-<br />
-````$ docker ps````
-```
+<br /> In cygwin type<br />
+```$ docker ps```
+````
 CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                     NAMES
 25cb813e65ef        selenium/node-chrome-debug   "/opt/bin/entry_po..."   36 minutes ago      Up 36 minutes       0.0.0.0:32774->5900/tcp   vibrant_shockley
 0e09f866db5a        selenium/node-chrome-debug   "/opt/bin/entry_po..."   About an hour ago   Up About an hour    0.0.0.0:32773->5900/tcp   hopeful_goldberg
 ec4d9e5d3430        selenium/hub                 "/opt/bin/entry_po..."   About an hour ago   Up About an hour    0.0.0.0:32772->4444/tcp   selenium-hub
-```
+````
 
 VNC connection parameters
 servername = ```127.0.0.1:32773```
