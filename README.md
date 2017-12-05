@@ -5,27 +5,32 @@ You can install winpty from: https://github.com/rprichard/winpty
 
 
 
-* **Step 1: Git clone this repo**
-```$ git clone https://github.com/mpleijte/protractordemo.git```
+* **Step 1: Git clone this repo**<br />
+```git clone https://github.com/mpleijte/protractordemo.git```
 
-* **Step 2: Run selenium-hub**
-```$ winpty docker run -d -P --name selenium-hub selenium/hub```
-
-
-* **Step 3: Run selenium-chrome and link it to selenium-hub docker**
-```$ winpty docker run -d -P --link selenium-hub:hub selenium/node-chrome-debug```
+* **Step 2: Run selenium-hub**<br />
+```winpty docker run -d -P --name selenium-hub selenium/hub```
 
 
-* **Step 4: Run protractor container with a volume to local repo**
-Open cygwin and cd into cloned repo directory: protractordemo and type following commands
-```  
-$ export FILES="//c/<directory-path-to-mpleijte/protractordemo>/protractor-tests"````
-$ winpty docker run -it --rm --net="host" -v $FILES:/src felippenardi/yo````
-  (inside running container) $ protractor conf.js
-```
+* **Step 3: Run selenium-chrome and link it to selenium-hub docker**<br />
+```winpty docker run -d -P --link selenium-hub:hub selenium/node-chrome-debug```
 
+
+* **Step 4: Run protractor container with a volume to local repo**<br />
+Open cygwin and cd into cloned protractordemo directory
+<br />
+```export FILES="//c/<directory-path-to-mpleijte/protractordemo>/protractor-tests"```
+<br />
+```winpty docker run -it --rm --net="host" -v $FILES:/src felippenardi/yo```
+<br /><br />
+_You should now be inside running protractor container._ 
+<br />**To run the test, execute the following command:** <br />
+```protractor conf.js```
+<br />
+<br />
 * **Step 5 (Optional) view running tests with VNC viewer**
-In cygwin type
+<br /> In cygwin type
+<br />
 ````$ docker ps````
 ```
 CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                     NAMES
