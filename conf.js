@@ -1,7 +1,7 @@
 // conf.js content e.g.
 exports.config = {
   seleniumAddress:
-  'http://localhost:32772/wd/hub',
+  'http://localhost:4444/wd/hub',
   specs: ['spec.js']
 }
 
