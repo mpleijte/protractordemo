@@ -32,9 +32,8 @@ CONTAINER ID        IMAGE                        COMMAND                  CREATE
 0e09f866db5a        selenium/node-chrome-debug   "/opt/bin/entry_po..."   About an hour ago   Up About an hour    0.0.0.0:32773->5900/tcp   hopeful_goldberg
 ec4d9e5d3430        selenium/hub                 "/opt/bin/entry_po..."   About an hour ago   Up About an hour    0.0.0.0:32772->4444/tcp   selenium-hub
 ````
-
 VNC connection parameters
-servername = ```127.0.0.1:32773```
+servername = ```127.0.0.1:33378```
 password = ```secret```
 
 
