@@ -9,7 +9,7 @@ You can install winpty from: https://github.com/rprichard/winpty
 ```git clone https://github.com/mpleijte/protractordemo.git```
 
 * **Step 2: Run selenium and chrome containers**<br />
-docker-compose up
+```docker-compose up```
 
 * **Step 3: Run protractor container with a volume to local repo**<br />
 Open cygwin and cd into cloned protractordemo directory<br />
