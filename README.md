@@ -1,11 +1,6 @@
 # Steps for running protractor test in within git bash on Windows10 on docker. 
 
-Note 1: I'm using the 'winpty' as prefix for all docker run commands because I had difficulties getting a pseudo tty from within cygwin. 
-You can install winpty from: https://github.com/rprichard/winpty
-
-Note 2: Running this in cygwin fails on my system because of the fact that command in step 4 has `realpath .` to retrieve absolute path. In cygwin absolute path starts with '/cygwin/c' but docker expects '//c'.
-
-
+Note 1: I'm using the 'winpty' as prefix for all docker run commands because I had difficulties getting a pseudo tty from git bash or cygwin. You can install winpty from: https://github.com/rprichard/winpty
 
 * **Step 1: Git clone this repo**<br />
 ```git clone https://github.com/mpleijte/protractordemo.git```
