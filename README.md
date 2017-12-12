@@ -1,6 +1,6 @@
 # Steps for running protractor test in within cygwin on Windows10 on docker. 
 
-Note: I'm using the 'winpty' command because I had difficulties getting a pseudo tty from within cygwin. 
+Note: I'm using the 'winpty' as prefix for all docker run commands because I had difficulties getting a pseudo tty from within cygwin. 
 You can install winpty from: https://github.com/rprichard/winpty
 
 
@@ -14,8 +14,7 @@ docker-compose up
 * **Step 3: Run protractor container with a volume to local repo**<br />
 Open cygwin and cd into cloned protractordemo directory<br />
 ```
-export FILES="//c/<directory-path-to-mpleijte/protractordemo>/protractor-tests"
-winpty docker run -it --rm --net="host" -v $FILES:/src felippenardi/yo
+docker run -it --rm --net="host" -v /`realpath .`:/src felippenardi/yo
 ```
 <br /><br />
 _You should now be inside running protractor container._ 
