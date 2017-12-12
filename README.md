@@ -9,7 +9,7 @@ You can install winpty from: https://github.com/rprichard/winpty
 ```git clone https://github.com/mpleijte/protractordemo.git```
 
 * **Step 2: Run selenium and chrome containers**<br />
-docker-compose up
+```docker-compose up```
 
 * **Step 3: Run protractor container with a volume to local repo**<br />
 Open cygwin and cd into cloned protractordemo directory<br />
@@ -31,9 +31,8 @@ CONTAINER ID        IMAGE                        COMMAND                  CREATE
 0e09f866db5a        selenium/node-chrome-debug   "/opt/bin/entry_po..."   About an hour ago   Up About an hour    0.0.0.0:32773->5900/tcp   hopeful_goldberg
 ec4d9e5d3430        selenium/hub                 "/opt/bin/entry_po..."   About an hour ago   Up About an hour    0.0.0.0:32772->4444/tcp   selenium-hub
 ````
-
 VNC connection parameters
-servername = ```127.0.0.1:32773```
+servername = ```127.0.0.1:33378```
 password = ```secret```
 
 
