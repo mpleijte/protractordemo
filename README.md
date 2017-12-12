@@ -1,7 +1,9 @@
-# Steps for running protractor test in within cygwin on Windows10 on docker. 
+# Steps for running protractor test in within git bash on Windows10 on docker. 
 
-Note: I'm using the 'winpty' as prefix for all docker run commands because I had difficulties getting a pseudo tty from within cygwin. 
+Note 1: I'm using the 'winpty' as prefix for all docker run commands because I had difficulties getting a pseudo tty from within cygwin. 
 You can install winpty from: https://github.com/rprichard/winpty
+
+Note 2: Running this in cygwin fails on my system because of the fact that command in step 4 has `realpath .` to retrieve absolute path. In cygwin absolute path starts with '/cygwin/c' but docker expects '//c'.
 
 
 
@@ -11,8 +13,8 @@ You can install winpty from: https://github.com/rprichard/winpty
 * **Step 2: Run selenium and chrome containers**<br />
 ```docker-compose up```
 
-* **Step 3: Run protractor container with a volume to local repo**<br />
-Open cygwin and cd into cloned protractordemo directory<br />
+* **Step 3: Run protractor container with a volume to your local repo**<br />
+Open git bash and cd into cloned protractordemo directory<br />
 ```
 docker run -it --rm --net="host" -v /`realpath .`:/src felippenardi/yo
 ```
@@ -23,7 +25,7 @@ _You should now be inside running protractor container._
 <br />
 <br />
 * **Step 4 (Optional) view running tests with VNC viewer**
-<br /> In cygwin type<br />
+<br /> In git bash type<br />
 ```$ docker ps```
 ````
 CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                     NAMES
